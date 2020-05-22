@@ -1,0 +1,54 @@
+.mainContainer{
+  height: 2000px;
+}
+
+
+
+.body {
+}
+
+.image img{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+
+}
+
+.content h2 {
+  margin: 20px;
+}
+
+.content {
+  margin: 30px;
+}
+
+
+
+
+  .image-button{
+      padding: 15px;
+      width: 10%;
+      background-color: #747c88;
+      color: white;
+  }
+
+  .image-button:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #adbacc;
+    border-radius: 5px;
+
+  }
+
+  @media (min-width: 700px){
+    .content {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      padding: 40px;
+      
+    }
+  }

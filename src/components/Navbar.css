@@ -1,0 +1,136 @@
+/*Nav Bar*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+
+/*edit background*/
+nav{
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #2e3033;
+    font-family: 'Poppins', sans-serif;
+
+    /*To keep nav on top. Otherwise delete these next two lines*/
+    /*position: fixed;*/
+    width: 100%;
+    
+
+}
+
+/*edit 'khobkoon' font in navbar*/
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 26px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 15px; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18px; 
+}
+
+
+
+.logo a{
+  text-decoration: none;
+  color: white;
+}
+
+.logo a:hover {
+  color: grey;
+}
+
+/*edit nav links spacing*/
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 40%/*add more spacing*/ 
+}
+
+/*Remove bullet points on li nav*/
+.nav-links li{
+    list-style: none;
+}
+
+/*Edit navigation links font*/
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 15px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 26px; } h3 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: bold; line-height: 15px; } p { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18px; 
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+
+
+/* side nav ---------------------------------*/
+
+.side-nav{
+    height:100%;
+    width:0;
+    position:fixed;
+    z-index:1;
+    top:0;
+    left:0;
+    background-color:#2e3033;
+    opacity:0.9;
+    overflow-x:hidden;
+    padding-top:60px;
+    transition:0.5s;
+  }
+  
+  .side-nav a{
+    padding:10px 10px 10px 30px;
+    text-decoration:none;
+    font-size:22px;
+    color:#ccc;
+    display:block;
+    transition:0.3s;
+    list-style: none;
+  }
+  
+  .side-nav a:hover{
+    color:#fff;
+  }
+  
+  .side-nav .btn-close{
+    position:absolute;
+    top:0;
+    right:22px;
+    font-size:36px;
+    margin-left:50px;
+  }
+  
+  #container-1a{
+    transition:margin-left 0.5s;
+    padding:20px;
+    overflow:hidden;
+    width:100%;
+  }
+  
+  @media(max-width:750px){
+    .nav-links{display:none}
+  }
+
+  @media(min-width: 750px){
+    .open-slide{ display: none}
+  }
+  
+  @media(min-width:568px){
+    /*.open-slide{display:none}*/
+  }
+
+
+  

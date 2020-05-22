@@ -1,0 +1,132 @@
+.container-1b {
+
+}
+
+.main h2{
+    text-align: center;
+    padding-top: 80px;
+  }
+
+.main{ 
+    display: grid;
+    grid-template-columns: 3fr 8fr;
+
+  }
+
+.products{
+    padding: 20px;
+
+    /*display: flex;
+    flex-direction: column;*/
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+
+
+
+
+
+}
+
+.products-sidebar {
+    list-style: none;
+    /*background-color: whitesmoke;*/
+    /*display: grid;
+    grid-template-columns: 3fr;*/
+    grid-auto-rows: minmax(50px, auto); /*set minimum row height at 350px and auto adjust as content is added*/
+
+    
+    /*grid-auto-rows: minmax(20px, auto);*/
+    /*grid-auto-columns: minmax(400px, auto);*/
+    max-width: 288px;
+    min-width: 230px;
+
+}
+
+
+
+
+.category{
+    /*display: grid;
+    grid-template-columns: 3fr;*/
+    border: 1px solid whitesmoke;
+}
+
+.category li {
+    background-color: rgb(230, 227, 227);
+    padding: 10px 10px 20px 20px;
+    cursor: pointer;
+
+}
+
+.category li:hover {
+    border-left: 3px solid orange;
+}
+
+.category div ul {
+    margin-left: 2em;
+}
+
+.category li img {
+    float: right;
+}
+
+.filter {
+    background-color: red;
+}
+
+/* filter button */
+.container-1b button {
+    background-color: rgb(65, 62, 62);
+    color: white;
+    font: inherit;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+    width: 120px;
+
+
+}
+
+.container-1b button:hover {
+    background-color:#7a7e83;
+    color: white;
+}
+
+.list-wrapper ul {
+    padding: 5px;
+}
+
+.links {
+    display: grid;
+}
+
+.links ul {
+    padding-top: 8px;
+    padding-bottom: 3px;
+
+}
+
+/* filter button */
+.filterButton {
+    background-color: rgb(65, 62, 62);
+    color: white;
+    font: inherit;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 8px;
+    margin: 5px;
+    cursor: pointer;
+    width: 120px;
+
+
+}
+
+.filterButton:hover {
+    background-color:#7a7e83;
+    color: white;
+}
+
+
+
+

@@ -1,0 +1,149 @@
+.product-image img {
+    /*border: 1px solid rgb(238, 233, 233);*/
+    
+    padding: 2px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+.product-info {
+    list-style: none;
+    margin: 20px;
+}
+
+.product-info li {
+    padding: 8px;
+}
+
+
+
+
+
+.card-wrapper li, h2 {
+    font-family: "Helvetica Neue";
+}
+
+.tabs-wrapper {
+    border-top: 2px solid whitesmoke;
+    padding: 20px 0 20px 0;
+    margin: 20px 0 20px 0;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.tab:hover {
+    /*background-color: #64686e;
+    border-radius: 19px;*/
+    cursor: pointer;
+   
+}
+
+.tab-toggle {
+    color: black;
+}
+
+.tab {
+    font: inherit;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: grid;
+
+}
+
+.tab-active {
+    
+    font: inherit;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 10px;
+    
+
+    
+}
+
+.toggled-description {
+
+    padding: 10px;
+}
+
+.btnCart{
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font: inherit;
+    cursor: pointer;
+    width: 105px;
+}
+
+.btnCart:hover{
+    background-color: rgb(97, 96, 96);
+    color: white;
+    border: 1px solid #333;
+}
+
+@media (min-width: 800px) {
+
+    .product-info-wrapper {
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+    
+        
+    }
+    
+    .product-info {
+        margin: 0 16px 0 16px;
+        list-style-type: none;
+        grid-auto-columns: minmax(600, auto);
+    
+        display: grid;
+    
+        justify-content: center;
+        align-content: center;
+        
+        
+    }
+    .product-info h1 {
+        margin-bottom: 20px;
+    }
+    
+    .product-image {
+        /*border: 1px solid rgb(238, 233, 233);*/
+        padding: 2px;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    
+    }
+
+    .tabs-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tabs {
+        grid-gap: 40px;
+
+    }
+
+    .toggled-description{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    
+}

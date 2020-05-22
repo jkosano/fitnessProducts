@@ -1,0 +1,32 @@
+.subnav-container {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(6, 1fr);*/
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*min-height: 8vh;*/
+    min-height: 1vh;
+    background-color: #45484d;
+    font-family: 'Poppins', sans-serif;
+
+    /*To keep nav on top. Otherwise delete these next two lines*/
+    /*position: fixed;*/
+    width: 100%;
+
+
+}
+
+.subnav-container a, .subnav-container li {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.subnav-container li:hover {
+    color: rgb(182, 182, 182);
+}
+
+.shop-dropdown {
+
+}
