@@ -4,21 +4,6 @@ import {Link} from 'react-router-dom';
 
 export default function ProductCard(props) {
 
-    const productLink = (
-        <ul><Link to={`/Products/${props.id}`}>{props.name}</Link></ul>
-    )
-    const equipmentLink = (
-        <ul><Link to={`/equipment/${props.id}`}>{props.name}</Link></ul>
-    )
-
-    const barbellLink = (
-        <ul><Link to={`/Products/${props.id}`}>{props.name}</Link></ul>
-    )
-
-
-
-
-
     return (
             <div className="products">
                 <div className="product-card" key={props.id}>
@@ -36,6 +21,3 @@ export default function ProductCard(props) {
         
     )
 }
-
-/*                         <Link to={`/Products/${item.id}`}>{item.name}</Link>
-*/

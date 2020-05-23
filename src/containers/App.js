@@ -201,6 +201,7 @@ class App extends Component {
             <Route exact path="/plates" render={ (props) => <ProductListings {...props} plateCards={plates} />}/>
             <Route exact path="/shoes" render={ (props) => <ProductListings {...props} shoeCards={shoes} />}/>
             <Route exact path="/apparel" render={ (props) => <ProductListings {...props} apparelCards={apparel} />}/>
+            <Route exact path="/products" render={ (props) => <ProductListings {...props} equipmentCards={equipment} barbellCards={barbells} apparelCards={apparel} {...props} plateCards={plates} shoeCards={shoes} />} />}/>
             <Route exact path="/products/equipment/:id" render={ (props) => <ProductDetail {...props} passedState={this.state} category={'equipment'} />} />}/>
             <Route exact path="/products/barbell/:id" render={ (props) => <ProductDetail {...props} passedState={this.state} category={'barbell'}/>}  />}/>
             <Route exact path="/products/plates/:id" render={ (props) => <ProductDetail {...props} passedState={this.state} category={'plates'}/>}  />}/>

@@ -1,8 +1,6 @@
 import React from 'react';
 import SquatRack from '../assets/squat-rack.jpg';
 import IsoLeg from '../assets/iso-leg.jpg';
-import Gym from '../assets/gym.jpg';
-//width="667" height ="1000"
 import { Spring } from 'react-spring/renderprops'
 import classes from './Home.module.css';
 

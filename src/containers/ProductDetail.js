@@ -7,8 +7,6 @@ export default function ProductDetail( props, {match}) {
 
     let description2;
 
-    //id is being read, but how do i match that id with each item for equipment, freeweights, barbells, etc
-
     useEffect( () => {
         //console.log(props);
 
@@ -31,9 +29,6 @@ export default function ProductDetail( props, {match}) {
                 if (item.id === Number(props.match.params.id) ) {
     
                     selectedItem = item;
-                    //console.log(selectedItem);
-                    //console.log(selectedItem.description2)
-                    //console.log(item.description2)
     
                     //convert detailed description to a global variable to read outside when toggling the tabs
                     description2 = item.description2;
@@ -48,9 +43,6 @@ export default function ProductDetail( props, {match}) {
                 if (item.id === Number(props.match.params.id) ) {
     
                     selectedItem = item;
-                    //console.log(selectedItem);
-                    //console.log(selectedItem.description2)
-                    //console.log(item.description2)
     
                     //convert detailed description to a global variable to read outside when toggling the tabs
                     description2 = item.description2;
@@ -65,9 +57,6 @@ export default function ProductDetail( props, {match}) {
                 if (item.id === Number(props.match.params.id) ) {
     
                     selectedItem = item;
-                    //console.log(selectedItem);
-                    //console.log(selectedItem.description2)
-                    //console.log(item.description2)
     
                     //convert detailed description to a global variable to read outside when toggling the tabs
                     description2 = item.description2;
@@ -82,9 +71,6 @@ export default function ProductDetail( props, {match}) {
                 if (item.id === Number(props.match.params.id) ) {
     
                     selectedItem = item;
-                    //console.log(selectedItem);
-                    //console.log(selectedItem.description2)
-                    //console.log(item.description2)
     
                     //convert detailed description to a global variable to read outside when toggling the tabs
                     description2 = item.description2;
@@ -99,9 +85,6 @@ export default function ProductDetail( props, {match}) {
                 if (item.id === Number(props.match.params.id) ) {
     
                     selectedItem = item;
-                    //console.log(selectedItem);
-                    //console.log(selectedItem.description2)
-                    //console.log(item.description2)
     
                     //convert detailed description to a global variable to read outside when toggling the tabs
                     description2 = item.description2;
@@ -110,12 +93,6 @@ export default function ProductDetail( props, {match}) {
     
             });
         }
-
-
-
-
-
-        
 
         setItem(selectedItem);
     }
@@ -127,6 +104,8 @@ export default function ProductDetail( props, {match}) {
         setDescription(true);
         setSpecs(false);
         setReview(false);
+        setQa(false);
+
 
     }; 
 
@@ -136,6 +115,8 @@ export default function ProductDetail( props, {match}) {
         setSpecs(true);
         setDescription(false); //toggle off description tab
         setReview(false);
+        setQa(false);
+
 
     }; 
 
@@ -145,7 +126,18 @@ export default function ProductDetail( props, {match}) {
         setReview(true);
         setDescription(false); //toggle off description tab
         setSpecs(false);
+        setQa(false);
+
     }; 
+
+    //
+    const [isQaOn, setQa] = useState(false);
+    const toggleQa = () => {
+        setQa(true);
+        setDescription(false); //toggle off description tab
+        setReview(false);
+        setSpecs(false);
+    }
 
     
     return (
@@ -170,7 +162,7 @@ export default function ProductDetail( props, {match}) {
                     <button className={isDescriptionOn ? "tab-active" : "tab"} onClick={toggleDescriptionTab}>Description</button>
                     <button className={isSpecsOn ? "tab-active" : "tab"} onClick={toggleSpecsTab}>Specifications</button>
                     <button className={isReviewOn ? "tab-active" : "tab"} onClick={toggleReview}>Reviews</button>
-                    <button className="tab">Q & A</button>
+                    <button className={isQaOn ? "tab-active" : "tab"} onClick={toggleQa} >Q & A</button>
                 </div>
                 
                 </div>
@@ -227,6 +219,23 @@ export default function ProductDetail( props, {match}) {
                     <animated.div style={props}>
                 <div className="toggled-description">
                     <div className="tab-toggle">{isReviewOn ? <div>Ipsum Ipsum Ipsum Ipsum Ipsum Ipsum</div> : null}
+                    </div>
+                </div>
+                </animated.div>
+                    ))}
+                </Transition>
+
+                <Transition
+                    native
+                    items={isQaOn}
+                    from={{ opacity: 0 }}
+                    enter={{ opacity: 1 }}
+                    leave={{ opacity: 0 }}
+                >
+                    {show => show && (props => (
+                    <animated.div style={props}>
+                <div className="toggled-description">
+                    <div className="tab-toggle">{isQaOn ? <div>What is the warranty?</div> : null}
                     </div>
                 </div>
                 </animated.div>
