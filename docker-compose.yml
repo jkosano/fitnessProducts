@@ -1,0 +1,27 @@
+version: '3'
+
+#services aka containers
+services:
+  web: 
+    #recall that we have a dockerfile.dev. So we can't just use " 'build: .' We need to specify the dockerfile.dev" --> Solution: use "context: ."
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev #look in cwd for this file
+    ports:
+     - "3000:3000"
+
+    #shorthand for docker volumes
+    volumes: 
+      - /app/node_modules #this means "don't map this folder against node_modules inside container"
+      - .:/app #map cwd outside of container (.) to app folder inside of container
+
+  #create a test service to work with 'docker run -it <image-id> npm run test'
+  tests: 
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes: 
+      - /app/node_modules
+      - .:/app 
+    #override starting CMD
+    command: ["npm", "run", "test"]
