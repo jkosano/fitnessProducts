@@ -1,7 +1,7 @@
 import React, { Component, useState }from 'react';
 import './App.css';
 
-import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import SubNavbar from '../components/SubNavbar';
 import Home from './Home';
