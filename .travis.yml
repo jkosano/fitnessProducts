@@ -8,7 +8,8 @@ services:
 before_install: 
   - docker build -t jpk912/fitnessProducts-test -f ./Dockerfile.dev .
 
-# -- -- indicates that the code should exit
+#create a test script to run an 'npm test'
+# "-- --coverage" indicates that the script should exit with 0 or 1
 script:
   - docker run -e CI=true jpk912/fitnessProducts-test npm test -- --coverage
 
