@@ -10,6 +10,8 @@ services:
     ports:
      - "3000:3000"
 
+    stdin_open: true
+
     #shorthand for docker volumes
     volumes: 
       - /app/node_modules #this means "don't map this folder against node_modules inside container"
