@@ -6,12 +6,15 @@ services:
   # -f flag specifies build context/location of of the dockerfile
   # the last . indicates the CWD for the build of the WHOLE project.
 before_install: 
-  - docker build -t jpk912/fitnessproducts-test -f ./Dockerfile.dev .
+  - echo "Logging into docker hub...."
+  - docker login -e=$DOCKER_EMAIL -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+  - echo "Docker Hub credentials worked"
+  #- docker build -t jpk912/fitnessproducts-test -f ./Dockerfile.dev .
 
 #create a test script to run an 'npm test'
 # "-- --coverage" indicates that the script should exit with 0 or 1
 script:
-  - docker run -e CI=true jpk912/fitnessproducts-test npm test -- --coverage
+  #- docker run -e CI=true jpk912/fitnessproducts-test npm test -- --coverage
 
 #build production versions of all projects
 after_success: 
