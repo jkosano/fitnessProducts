@@ -1,0 +1,23 @@
+sudo: required
+services:
+  - dockerfile
+
+#build a test version before install for the client (prod dockerfiles don't allow for tests)
+  # -f flag specifies build context/location of of the dockerfile
+  # the last . indicates the CWD for the build of the WHOLE project.
+before_install: 
+  - docker build -t jpk912/fitnessProducts-test -f ./Dockerfile.dev .
+
+# -- -- indicates that the code should exit
+script:
+  - docker run -e CI=true jpk912/fitnessProducts-test npm test -- --coverage
+
+#build production versions of all projects
+after_success: 
+  #build client, nginx, server, worker
+  - docker build -t jpk912/fitnessProducts .
+
+  #log into docker CLI with ENV variables and push to docker hub
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push jpk912/fitnessProducts
+
