@@ -1,6 +1,6 @@
 sudo: required
 services:
-  - dockerfile
+  - docker
 
 #build a test version before install for the client (prod dockerfiles don't allow for tests)
   # -f flag specifies build context/location of of the dockerfile
