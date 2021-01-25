@@ -16,8 +16,8 @@ before_install:
   - docker build -t jpk912/fitnessproducts-test -f Dockerfile.dev .
 
 #create a test script to run an 'npm test'
-# "-- --coverage" indicates that the script should exit with 0 or 1
-# -e is a flag for 'env variable'
+  # "-- --coverage" indicates that the script should exit with 0 or 1
+  # -e is a flag for 'env variable'
 script:
   - docker run -e CI=true jpk912/fitnessproducts-test npm test -- --coverage
 
