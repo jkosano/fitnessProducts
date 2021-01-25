@@ -6,9 +6,9 @@ services:
   # -f flag specifies build context/location of of the dockerfile
   # the last . indicates the CWD for the build of the WHOLE project.
 before_install: 
-  - echo "Logging into docker hub...."
-  - docker login -e=$DOCKER_EMAIL -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
-  - echo "Docker Hub credentials worked"
+   - echo "Logging into docker hub...."
+  # - docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
+  # - echo "Docker Hub credentials worked"
   #- docker build -t jpk912/fitnessproducts-test -f ./Dockerfile.dev .
 
 #create a test script to run an 'npm test'
