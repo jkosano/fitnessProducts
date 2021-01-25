@@ -1,8 +1,9 @@
 #sudo: required
 services:
   - docker
-language: 
-  - node_js
+# language: 
+#   #- node_js
+#   - ruby
 
 #build a test version before install for the client (prod dockerfiles don't allow for tests)
   # -f flag specifies build context/location of of the dockerfile
