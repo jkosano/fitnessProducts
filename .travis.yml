@@ -1,6 +1,8 @@
 #sudo: required
 services:
   - docker
+language: 
+  -node_js
 
 #build a test version before install for the client (prod dockerfiles don't allow for tests)
   # -f flag specifies build context/location of of the dockerfile
@@ -14,7 +16,7 @@ before_install:
 #create a test script to run an 'npm test'
 # "-- --coverage" indicates that the script should exit with 0 or 1
 script:
-  #- docker run -e CI=true jpk912/fitnessproducts-test npm test -- --coverage
+  - docker run -e CI=true jpk912/fitnessproducts-test npm test -- --coverage
 
 #build production versions of all projects
 after_success: 
